@@ -9,16 +9,13 @@ import uhd from "./images/uhd.png";
 import cir from "./images/uhd-c.png";
 
 function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // Manage the menu state
-
-  // Handle the toggle menu action
+  const [isMenuOpen, setIsMenuOpen] = useState(false); 
   const handleToggle = () => {
-    setIsMenuOpen((prevState) => !prevState); // Toggle the menu visibility
+    setIsMenuOpen((prevState) => !prevState); 
   };
 
   return (
     <>
-      {/* Desktop Navigation */}
       <div className="App-header">
         <nav className='nav'>
           <ul className='nav-links'>
@@ -33,9 +30,8 @@ function Header() {
         </nav>
       </div>
 
-      {/* Mobile Navigation */}
       <div className="mob-header">
-        <div className="mob-logo" onClick={handleToggle}> {/* Corrected the 'onclick' to 'onClick' */}
+        <div className="mob-logo" onClick={handleToggle}> 
           <img src={logo} alt="logo" id='mob-logo' />
         </div>
         <span className="mob-name">Jones P</span>

@@ -316,13 +316,13 @@
     position: absolute;
     left: 35%;
     top: 40px;
-    transform: translate(-50%, -50%); /* Perfect centering */
+    transform: translate(-50%, -50%); 
     font-family: 'million', sans-serif;
-    font-size: clamp(24px, 5vw, 36px); /* Responsive size */
+    font-size: clamp(24px, 5vw, 36px); 
     color: #177db0;
     animation: slideDown 0.8s ease-out forwards;
     transition: transform 0.3s ease, font-size 0.3s ease;
-    white-space: nowrap; /* prevent name from breaking into two lines */
+    white-space: nowrap; 
   }
   
 }
