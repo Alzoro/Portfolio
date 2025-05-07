@@ -1,330 +1,68 @@
-::-webkit-scrollbar {
-  display: none;
-}
-
-@font-face{
-  font-family: 'million';
-  src : url('../public/fonts/MillionDesign.ttf') format('truetype');
-}
-
-@font-face{
-  font-family: 'firacode';
-  src : url('../public/fonts/FiraCode-Regular.ttf') format('truetype');
-}
-
-@font-face{
-  font-family: 'nexa';
-  src : url('../public/fonts/Nexa-Heavy.ttf') format('truetype');
-}
-
-@keyframes slideDownHeader {
-  from {
-    transform: translate(-54%, -100%);
-    opacity: 0;
-  }
-  to {
-    transform: translate(-54%, 0);
-    opacity: 1;
-  }
-}
-
-@keyframes slideIn {
-  from {
-    transform: translateX(-15%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes slideDown {
-  from {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes slideUp {
-  from {
-    transform: translateY(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes slideLeft {
-  from {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes glow{
-  0%,100% {
-    opacity: 0.7;
-  }
-  50% {
-    opacity: 0.9;
-  }
-}
-
-@keyframes rotateo {
-  from {
-    transform: rotate(360deg);
-  }
-  to {
-    transform: rotate(0deg);
-  }
-}
-
-@keyframes fadeInuhd {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 0.7;
-  }
-}
-@keyframes fadeInn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 0.05;
-  }
-}
-
-.mob-header{
-  display: none;
-}
+/*color: #1f66de;*/
 
 .container{
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
 }
 
-.App-header{
-  position: fixed;
-  top: 1.5rem;
-  left: 50%;
-  width: 70%;
-  max-width: 1300px;
-  background: transparent;
-  backdrop-filter: blur(5px); 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 3rem;
-  padding: clamp(0.75rem, 2vw, 1.25rem) clamp(1rem, 4vw, 4rem);
-  z-index: 1000;
-  transform: translateX(-50%);
-  animation: slideDownHeader 1s ease-out forwards;
-}
-
-.logo {
-  position: relative;
-  width: auto;
-  height: 55px;
-  transition: 0.3s ease;
-  top: -0.5rem;
-}
-.logo:hover {
-  transform: scale(1.3);
-}
-
-.nav{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.pc_bimg{
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: -1;
 }
-.nav-links {
-  padding-top: 1rem;
-  list-style: none;
-  display: flex;
-  flex-wrap: nowrap;
-  text-align: center;
-  gap: clamp(80px, 5vw, 100px);
+
+.header{
+  position: relative;
+  width: 100%;
+  height: 30px;
+  background: #1f2028;
 }
-.nav-links li a {
-  font-family: 'nexa', sans-serif;
+
+.pc_img1{
+  position: absolute;
+  object-fit: contain;
+  width: 50px;
+  height: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 25px;
+}
+
+.pc_img2{
+  position: absolute;
+  object-fit: contain;
+  width: 100px;
+  height: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 25px;
+}
+
+.header a{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 105px;
   color: white;
-  font-size: clamp(18px , 2vw, 20px);
-  cursor: pointer;
-  white-space: nowrap;
-  transition: 0.3s ease-in-out;
-  text-decoration: none;
-}
-.nav-links li a:hover {
-  font-size: 23px;
-  color: #177db0;
-  text-shadow: 0px 0px 3px #177db0;
+  font-size: 15px;
+  word-spacing: 20px;
 }
 
-
-
-@media screen and (max-width: 1400px) {
-  .mob-header{
-    display: none;
-  }
-  .App-header{
-    width: 80%;
-    padding: clamp(0.75rem, 2vw, 1.25rem) clamp(1rem, 4vw, 3.5rem);
-  }
-  .nav-links {
-    gap: clamp(30px, 5vw, 80px);
-  }
-  .logo {
-    height: 50px;
-    top: -0.4rem;
-  }
-
-  .nav-links li a {
-    font-size: clamp(16px, 2vw, 18px);
-  }
-  .nav-links li a:hover {
-    font-size: clamp(19px, 2vw, 21px);
-  }
-  
+.DT{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  color:white;
+  font-size: 15px;
+  font-weight: bold;
+  display: flex;
+  gap:20px;
 }
-
-@media screen and (max-width:1024px) {
-  .mob-header{
-    display: none;
-  }
-  .App-header{
-    width: 80%;
-    padding: clamp(0.75rem, 2vw, 1.25rem) clamp(1rem, 4vw, 3.5rem);
-  }
-  .nav-links {
-    gap: clamp(20px, 3vw, 30px);
-  }
-  .logo {
-    height: 40px;
-    top: -0.4rem;
-  }
-
-  .nav-links li a {
-    font-size: clamp(14px, 2vw, 16px);
-  }
-  .nav-links li a:hover {
-    font-size: clamp(17px, 2vw, 19px);
-  }
-
-}
-
-/* Default mobile styles */
-@media screen and (max-width: 768px) {
-  .App-header {
-    display: none;
-  }
-
-  .mob-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 40px;
-  }
-
-  .mob-logo img {
-    width: clamp(30px, 8vw, 50px); 
-    height: auto;
-    cursor: pointer;
-    animation: slideIn 2s ease-out forwards;
-    transition: transform 0.3s ease, width 0.3s ease;
-
-  }
-  
-
-  .mob-nav {
-    display: none; 
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    background-color: transparent;
-    backdrop-filter: blur(5px); 
-    position: absolute;
-    top: 80px;
-    left: 10px;
-    width: 200px;
-    border-radius: 8px;
-  }
-
-  .mob-nav.open {
-    display: block; 
-  }
-
-  .mob-nav-links {
-    list-style: none;
-    display: flex;
-    flex-direction: column; 
-    padding: 10px;
-  }
-
-  .mob-nav-links li {
-    margin: 10px 0;
-  }
-
-  .mob-nav-links a {
-    color: #fff;
-    font-family: 'nexa', sans-serif;
-    text-decoration: none;
-    padding: 10px 16px;
-    font-size: clamp(10px, 2vw, 14px);
-    display: block;
-  }
-
-  .mob-nav-links a:hover {
-    font-size: clamp(13px, 2vw, 17px);
-    color: #177db0;
-    text-shadow: 0px 0px 3px #177db0;
-  }
-  .mob-name {
-    position: absolute;
-    left: 35%;
-    top: 40px;
-    transform: translate(-50%, -50%); 
-    font-family: 'million', sans-serif;
-    font-size: clamp(24px, 5vw, 36px); 
-    color: #177db0;
-    animation: slideDown 0.8s ease-out forwards;
-    transition: transform 0.3s ease, font-size 0.3s ease;
-    white-space: nowrap; 
-  }
-  
-}
-
 
