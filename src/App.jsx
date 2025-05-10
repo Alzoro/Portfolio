@@ -12,6 +12,11 @@ import img5 from './images/icon/5.png';
 import img6 from './images/icon/6.png';
 import img7 from './images/icon/7.png';
 import img8 from './images/icon/8.png';
+import m1 from './images/icon/m1.png';
+import m2 from './images/icon/m2.png';
+import m3 from './images/icon/m3.png';
+import m4 from './images/icon/m4.png';
+import m5 from './images/icon/m5.png';
 
 
 function Background() {
@@ -67,6 +72,29 @@ function Background() {
       </div>
 
       <div className="mobile">
+
+        <div className="mobile_bimg"></div>
+
+        <div className='title'>
+          <span className='mname'>JONES P</span>
+          <span className='msub-txt'>"the quiter you become, the more you are able to hear"</span>
+        </div>
+
+        <div className='Tim'>
+            <span className='Time'> {dateTime.time} </span>
+        </div>
+
+        <div className='Dat'>
+          <span className='Date'> {dateTime.date} </span>
+        </div>
+
+        <div className='mtask-bar'>
+          <img className='m1' src={m1} alt='app1'/>
+          <img className='m2' src={m2} alt='app2'/>
+          <img className='m3' src={m3} alt='app3'/>
+          <img className='m4' src={m4} alt='app4'/>
+          <img className='m5' src={m5} alt='app5'/>
+        </div>
         
       </div>
     </>

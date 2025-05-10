@@ -276,12 +276,156 @@
   }
 }
 
+.mobile{
+  position: relative;
+}
+
+.mobile_bimg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./images/bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+  }
+
+.mname{
+   position : absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-family: 'title', sans-serif;
+    
+    letter-spacing: 2px;
+    background: linear-gradient(to bottom,
+    #2c4c81 0%,
+    #2c4c81 42%,
+    #0f2751 43%,
+    #0f2751 100%);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px white;
+    white-space: nowrap;
+}
+
+.msub-txt{
+  position: absolute;
+    top: 54%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-family: "Courier New", Courier, monospace;
+    font-weight:bolder;
+    white-space: nowrap;
+    color: white;
+}
+
+
+.Tim {
+  position: absolute; 
+  left: 50%;
+  transform: translateX(-50%); 
+  display: flex;
+  color: white;
+  font-size: 80px;
+  font-weight: lighter;
+}
+
+.Dat{
+  position: absolute; 
+  left: 50%;
+  transform: translateX(-50%); 
+  display: flex;
+  color: white;
+  font-size: 30px;
+  font-weight: lighter;
+}
+
+.mtask-bar{
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display: flex;
+  justify-content: space-around; 
+  align-items: center; 
+  padding: 0 10px;
+  
+}
+
+.m1, .m2, .m3, .m4, .m5{
+  height: auto;
+  object-fit: contain;
+  z-index: 1;
+}
 
 @media screen and (max-width:768px){
-  .header{
+  .pc{
     display: none;
   }
   .mobile{
     display:contents;
+  }
+  
+  .mname{
+   font-size: clamp(60px, 15vw, 100px);
+   
+  }
+
+  .msub-txt{
+    font-size: clamp(10px, 2.08vw, 14px);
+  }
+
+  .Tim{
+    font-size: clamp(50px, 10vw, 80px);
+    top: clamp(80px, 6.5vw, 100px);
+
+  }
+  .Dat{
+    font-size: clamp(20px, 4vw, 30px);
+    top: clamp(140px, 23vw, 170px);
+  }
+  .mtask-bar{
+    width: 80%;
+  }
+  .m1, .m2, .m3, .m4, .m5{
+    width: clamp(50px, 7vw, 60px);
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+  
+  .mobile_bimg{
+    background-size:clamp(120%,2vw,180%);
+  }
+
+  .mname{
+   font-size: clamp(50px, 7.5vw, 60px);
+   
+  }
+
+  .msub-txt{
+    font-size: clamp(8px, 2.5vw, 10px);
+  }
+
+  .Tim{
+    font-size: clamp(40px, 10vw, 60px);
+
+  }
+  .Dat{
+    font-size: clamp(15px, 4vw, 20px);
+    top: 130px;
+  }
+  .mtask-bar{
+    width: 80%;
+  }
+  .m1, .m2, .m3, .m4, .m5{
+    width: clamp(40px, 10vw, 50px);
   }
 }
