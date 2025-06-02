@@ -4,6 +4,9 @@ import fig1 from './images/fig1.png';
 import fig2 from './images/fig2.png';
 import { getFormattedDate } from './script.js';
 import { getFormattedTime } from './script.js';
+import { toggleContent } from './script';
+
+
 import img1 from './images/icon/1.png';
 import img2 from './images/icon/2.png';
 import img3 from './images/icon/3.png';
@@ -17,6 +20,11 @@ import m2 from './images/icon/m2.png';
 import m3 from './images/icon/m3.png';
 import m4 from './images/icon/m4.png';
 import m5 from './images/icon/m5.png';
+import bru_icon from './images/bru_icon.png';
+import open from './images/open.png'; 
+import txtfile from './images/txtfile.png';
+import file from './images/file.png';
+
 
 
 function Background() {
@@ -32,10 +40,21 @@ function Background() {
         date: getFormattedDate(),
         time: getFormattedTime()
       });
-    }, 60000); // Update every minute
+    }, 60000);
 
-    return () => clearInterval(interval); // Cleanup on unmount
+    return () => clearInterval(interval); 
   }, []);
+
+   const [activeContent, setActiveContent] = useState(null);
+
+  const handleClick = (index) => {
+    setActiveContent((prev) => toggleContent(prev, index));
+  };
+
+  const handleBack = () => {
+    setActiveContent(null); // This hides the content box
+  };
+
 
   return (
     <>
@@ -54,6 +73,8 @@ function Background() {
         </div>
 
         <div className='title'>
+          <span className='wlc'>Welcome to my</span>
+          <span className='portfolio'>Portfolio.</span>
           <span className='name'>JONES P</span>
           <span className='sub-txt'>"the quiter you become, the more you are able to hear"</span>
         </div>
@@ -69,7 +90,29 @@ function Background() {
           <img className='img8' src={img8} alt='apps' />
         </div>
 
+        <div className='About'>
+          <img className='txtfile' src={txtfile} alt='text file'  onClick={()=> handleClick(1)}/>
+          <p className='about_caption'>About Me.txt</p>
+        </div>
+
+        {activeContent == 1 && (
+        <div className="content-box">
+          <div className='content-header'>
+            <img className='bur_icon' src={bru_icon} alt="bur_icon" />
+            <img className='open' src={open} alt="open" />
+            <p className='back' onClick={handleBack}>⬅ Back</p>
+            <p className='content-title'>About Me.txt</p>
+
+          </div>
+          <p className='aaa'>This is the dev content opened by clicking the image.</p>
+        </div>
+      )}
+
       </div>
+
+
+
+
 
       <div className="mobile">
 

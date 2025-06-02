@@ -5,6 +5,16 @@
   src: url('../public/fonts/golden-varsity.regular.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'txt';
+  src: url('../public/fonts/FiraCode-Medium.ttf') format('truetype');
+}
+
+@font-face{
+  font-family: 'portfolio';
+  src: url('../public/fonts/Hanifah\ Salamah.otf') format('opentype');
+}
+
 .mobile{
   display: none;
 }
@@ -95,8 +105,24 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  
   -webkit-text-stroke: 2px white;
+}
+
+.wlc{
+  position: absolute;
+  top: 8%;
+  left: 76%;
+  font-family: 'portfolio', sans-serif;
+  font-size: clamp(60px, 4.17vw, 70px);
+  color: white;
+}
+.portfolio{
+  position: absolute;
+  top: 10%;
+  left: 70%;
+  font-family: 'portfolio', sans-serif;
+  font-size: clamp(150px,9.5vw,200px);
+  color: white;
 }
 
 .sub-txt{
@@ -172,6 +198,130 @@
   transform: scale(1.2);
 }
 
+.About{
+  display: inline-block;
+  position: absolute;
+  top: 10%;
+  left: 3%;
+  text-align: center;
+  z-index: 1;
+}
+
+.txtfile{
+  width: clamp(45%, calc(5% + 2.5vw), 55%);
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.txtfile:hover{
+  transform: scale(1.01);
+}
+.txtfile:hover + .about_caption {
+  font-size: clamp(14px, calc(0.75rem + 0.2vw), 16px);
+  transition: font-size 0.2s ease-in-out;
+}
+
+.about_caption{
+  font-family: 'txt', sans-serif;
+  font-size: clamp(12px, calc(0.75rem + 0.2vw), 14px);
+  margin-top: 1px;
+  color: #fff;
+  transition: font-size 0.2s ease-in-out;
+}
+
+.content-box{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 80%;
+  height: 80%;
+  background-image: url('./images/template.png');
+  background-size:cover;
+  background-position: center;
+  background-repeat: no-repeat; 
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 1;
+}
+.content-header{
+  position: absolute;
+  display: flex;
+  top: 0%;
+  left: 50%;
+  height: 30px;
+  width: 100%;
+  transform: translateX(-50%);
+  background: #2a2c32;
+  align-items: center;
+  text-align: center;
+}
+.bur_icon{
+  position: absolute;
+  object-fit: contain;
+  width: 40px;
+  height: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 25px;
+}
+.open{
+  position: absolute;
+  object-fit: contain;
+  width: auto;
+  height: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 100px;
+  padding-left: 20px;
+}
+.back{
+  margin: auto 0;
+  line-height: 30px;
+  color: white;
+  font-size: 18px;
+  position: absolute;
+  left: 25px;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  font-family: 'txt', sans-serif;
+  align-items: center;
+}
+.back:hover{
+  color: rgb(190, 47, 47);
+  font-size: 20px;
+}
+.content-title{
+  margin: auto 0;
+  line-height: 30px;
+  color: white;
+  font-size: 18px;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  font-family: 'txt', sans-serif;
+  align-items: center;
+}
+.aaa{
+  font-size: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @media screen and (max-width: 1400px){
@@ -213,7 +363,51 @@
   .img8{
     width: clamp(30px, 4vw, 45px);
   }
+
+  .wlc{
+    font-size: clamp(45px, 3.38vw, 60px);
+  }
+  .portfolio{
+    font-size: clamp(120px,10vw,150px);
+  }
+  .txtfile{
+    width: clamp(40%, 4.88vw + 20.10%, 45%);
+  }
+  .txtfile:hover + .about_caption {
+    font-size: clamp(13px, 0.26vw + 10.34px, 14px);
+  }
+  .about_caption{
+    font-size: clamp(11px, 0.26vw + 8.34px, 12px);
+  }
+  .bur_icon{
+    width: clamp(35px, 1.32vw + 21.48px, 40px);
+  }
+  .open{
+    height: clamp(13px, 0.52vw + 7.64px, 15px);
+  }
+  .back{
+    font-size: clamp(16px, 0.52vw + 10.64px, 18px);
+  }
+  .back:hover{
+    font-size: clamp(18px, 0.52vw + 12.64px, 20px);
+  }
+  .content-title{
+    font-size: clamp(16px, 0.52vw + 10.64px, 18px);
+  }
+
+
+
 }
+
+
+
+
+
+
+
+
+
+
 
 
 @media screen and (max-width:1024px) {
@@ -274,7 +468,52 @@
   .img8{
     width: clamp(30px, 4vw, 35px);
   }
+   .wlc{
+    font-size: clamp(40px, 2.02vw + 24.47px, 45px);
+  }
+  .portfolio{
+    font-size: clamp(120px,10vw,150px);
+  }
+  .txtfile{
+    width: clamp(35%, 2.02vw + 17.47%, 40%);
+  }
+  .txtfile:hover + .about_caption {
+    font-size: clamp(12px, 0.4vw + 8.92px, 13px);
+  }
+  .about_caption{
+    font-size: clamp(10px, 0.4vw + 6.92px, 11px);
+  }
+  .content-header{
+    height: clamp(20px, 3.92vw - 0.15px, 30px);
+  }
+  .bur_icon{
+    width: clamp(30px, 1.96vw + 14.91px, 35px);
+  }
+  .open{
+    height: clamp(12px, 0.39vw + 7.98px, 13px);
+  }
+  .back{
+    font-size: clamp(14px, 0.81vw + 7.52px, 16px);
+  }
+  .back:hover{
+    font-size: clamp(16px, 0.81vw + 9.52px, 18px);
+  }
+  .content-title{
+    font-size: clamp(14px, 0.81vw + 7.52px, 16px);
+  }
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 .mobile{
   position: relative;
@@ -364,6 +603,16 @@
   z-index: 1;
 }
 
+
+
+
+
+
+
+
+
+
+
 @media screen and (max-width:768px){
   .pc{
     display: none;
@@ -397,6 +646,12 @@
     width: clamp(50px, 7vw, 60px);
   }
 }
+
+
+
+
+
+
 
 
 @media screen and (max-width: 480px) {

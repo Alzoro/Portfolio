@@ -14,4 +14,9 @@ function getFormattedTime() {
     return formattedTime;
 }
 
-export { getFormattedDate, getFormattedTime };
+function toggleContent(currentIndex, selectedIndex) {
+  return currentIndex === selectedIndex ? null : selectedIndex;
+}
+
+
+export { getFormattedDate, getFormattedTime, toggleContent };
