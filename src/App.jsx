@@ -104,9 +104,9 @@ function Background() {
             <p className='content-title'>About Me.txt</p>
 
           </div>
-          <p className='aaa'>This is the dev content opened by clicking the image.</p>
+          <p className='aaa'>This is the dev content asd asd asda asd asd asd asd asd  opened by clicking the image.</p>
         </div>
-      )}
+        )}
 
       </div>
 
@@ -138,7 +138,26 @@ function Background() {
           <img className='m4' src={m4} alt='app4'/>
           <img className='m5' src={m5} alt='app5'/>
         </div>
+
+        <div className='About'>
+          <img className='txtfile' src={txtfile} alt='text file'  onClick={()=> handleClick(1)}/>
+          <p className='about_caption'>About Me.txt</p>
+        </div>
+
+        {activeContent == 1 && (
+        <div className="content-box">
+          <div className='content-header'>
+            <img className='bur_icon' src={bru_icon} alt="bur_icon" />
+            <p className='back' onClick={handleBack}>⬅ Back</p>
+            <p className='content-title'>About Me.txt</p>
+
+          </div>
+          <p className='aaa'>This is the dev content opened by clicking the image.</p>
+        </div>
+        )}
         
+
+
       </div>
     </>
   );
