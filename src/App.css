@@ -198,21 +198,6 @@
   transform: scale(1.2);
 }
 
-.About{
-  display: inline-block;
-  position: absolute;
-  top: 10%;
-  left: 3%;
-  text-align: center;
-  z-index: 1;
-}
-
-.txtfile{
-  width: clamp(45%, calc(5% + 2.5vw), 55%);
-  height: auto;
-  transition: transform 0.3s ease-in-out;
-}
-
 .txtfile:hover{
   transform: scale(1.01);
 }
@@ -311,9 +296,59 @@
 .aaa{
   font-size: 50px;
 }
-
-
-
+.files {
+  position: absolute;
+  top: 10%;
+  left: 0%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  gap: 20px;
+}
+.About,
+.Skills,
+.Experience,
+.Projects,
+.Resume,
+.Contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.txtfile{
+  width: clamp(45%, calc(5% + 2.5vw), 55%);
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+.file{
+  width: clamp(60%, 5vw + 50%, 70%);
+  height: auto;
+  transition: transform 0.2s ease-in-out;
+}
+.file:hover{
+  transform: scale(1.1);
+}
+.file:hover + .about_caption {
+  font-size: clamp(14px, calc(0.75rem + 0.2vw), 16px);
+  transition: font-size 0.2s ease-in-out;
+}
+.resume{
+  width: 25%;
+  height: auto;
+  transition: transform 0.2s ease-in-out;
+}
+.resume:hover{
+  transform: scale(1.1);
+}
+.resume:hover + .about_caption {
+  font-size: clamp(14px, calc(0.75rem + 0.2vw), 16px);
+  transition: font-size 0.2s ease-in-out;
+}
+.dwn{
+  font-size: 12px;
+}
 
 
 
@@ -648,11 +683,14 @@
   .m1, .m2, .m3, .m4, .m5{
     width: clamp(50px, 7vw, 60px);
   }
-  .About{
+  .mAbout{
+    position: absolute;
+    text-align: center;
     top:70%;
     left:10%;
+    z-index: 1;
   }
-  .txtfile{
+  .mtxtfile{
     width: 40%;
   }
   /* .content-box{
@@ -717,11 +755,14 @@
   .m1, .m2, .m3, .m4, .m5{
     width: clamp(40px, 10vw, 50px);
   }
-  .About{
+  .mAbout{
+    position: absolute;
+    text-align: center;
     top:70%;
     left:10%;
+    z-index: 1;
   }
-  .txtfile{
+  .mtxtfile{
     width: clamp(35%, 3.33vw + 24.6%, 40%);
   }
   .about_caption{

@@ -24,7 +24,7 @@ import bru_icon from './images/bru_icon.png';
 import open from './images/open.png'; 
 import txtfile from './images/txtfile.png';
 import file from './images/file.png';
-
+import resume from './images/Resume.jpg';
 
 
 function Background() {
@@ -90,9 +90,39 @@ function Background() {
           <img className='img8' src={img8} alt='apps' />
         </div>
 
-        <div className='About'>
-          <img className='txtfile' src={txtfile} alt='text file'  onClick={()=> handleClick(1)}/>
-          <p className='about_caption'>About Me.txt</p>
+        <div className='files'>
+          <div className='About'>
+            <img className='txtfile' src={txtfile} alt='text file'  onClick={()=> handleClick(1)}/>
+            <p className='about_caption'>About Me.txt</p>
+          </div>
+
+          <div className='Skills'>
+            <img className='txtfile' src={txtfile} alt='text file'  onClick={()=> handleClick(2)}/>
+            <p className='about_caption'>Skills.txt</p>
+          </div>
+
+          <div className='Experience'>
+            <img className='txtfile' src={txtfile} alt='text file'  onClick={()=> handleClick(3)}/>
+            <p className='about_caption'>Experience.txt</p>
+          </div>
+
+          <div className='Projects'>
+            <img className='file' src={file} alt='text file'  onClick={()=> handleClick(3)}/>
+            <p className='about_caption'>Projects</p>
+          </div>
+
+          <div className='Resume'>
+            <img className='resume' src={resume} alt='text file'  onClick={()=> handleClick(3)}/>
+            <p className='about_caption'>Resume.pdf <br />
+              <span className="dwn">(click to download)</span>
+            </p>
+          </div>
+
+          <div className='Contact'>
+            <img className='file' src={file} alt='text file'  onClick={()=> handleClick(3)}/>
+            <p className='about_caption'>Contact</p>
+          </div>
+
         </div>
 
         {activeContent == 1 && (
@@ -102,6 +132,32 @@ function Background() {
             <img className='open' src={open} alt="open" />
             <p className='back' onClick={handleBack}>⬅ Back</p>
             <p className='content-title'>About Me.txt</p>
+
+          </div>
+          <p className='aaa'>This is the dev content asd asd asda asd asd asd asd asd  opened by clicking the image.</p>
+        </div>
+        )}
+
+        {activeContent == 2 && (
+        <div className="content-box">
+          <div className='content-header'>
+            <img className='bur_icon' src={bru_icon} alt="bur_icon" />
+            <img className='open' src={open} alt="open" />
+            <p className='back' onClick={handleBack}>⬅ Back</p>
+            <p className='content-title'>Skills.txt</p>
+
+          </div>
+          <p className='aaa'>This is the dev content asd asd asda asd asd asd asd asd  opened by clicking the image.</p>
+        </div>
+        )}
+
+        {activeContent == 3 && (
+        <div className="content-box">
+          <div className='content-header'>
+            <img className='bur_icon' src={bru_icon} alt="bur_icon" />
+            <img className='open' src={open} alt="open" />
+            <p className='back' onClick={handleBack}>⬅ Back</p>
+            <p className='content-title'>Experience.txt</p>
 
           </div>
           <p className='aaa'>This is the dev content asd asd asda asd asd asd asd asd  opened by clicking the image.</p>
@@ -139,8 +195,8 @@ function Background() {
           <img className='m5' src={m5} alt='app5'/>
         </div>
 
-        <div className='About'>
-          <img className='txtfile' src={txtfile} alt='text file'  onClick={()=> handleClick(1)}/>
+        <div className='mAbout'>
+          <img className='mtxtfile' src={txtfile} alt='text file'  onClick={()=> handleClick(1)}/>
           <p className='about_caption'>About Me.txt</p>
         </div>
 
