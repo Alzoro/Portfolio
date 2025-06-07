@@ -199,9 +199,13 @@
 }
 
 .txtfile:hover{
-  transform: scale(1.01);
+  transform: scale(1.1);
 }
 .txtfile:hover + .about_caption {
+  font-size: clamp(14px, calc(0.75rem + 0.2vw), 16px);
+  transition: font-size 0.2s ease-in-out;
+}
+.txtfile:hover + .aabout_caption {
   font-size: clamp(14px, calc(0.75rem + 0.2vw), 16px);
   transition: font-size 0.2s ease-in-out;
 }
@@ -231,6 +235,67 @@
   justify-content: center;
   z-index: 1;
 }
+.filecontent-box{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 80%;
+  height: 80%;
+  border-radius: 10px;
+  background: #272a34;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 1;
+}
+.innerbox{
+  position:absolute;
+  width: 700px;
+  height: 25px;
+  top:20%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 5px;;
+  background: #63636365;
+  align-items: center;
+  z-index: 1;
+}
+.threedot{
+  margin: auto 0;
+  color: white;
+  font-size: 18px;
+  position: absolute;
+  right: 2%;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+}
+.inner-content{
+  margin: auto 0;
+  color: white;
+  font-size: 13px;
+  position: absolute;
+  left:2%;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  font-family: 'txt', sans-serif;
+  align-items: center;
+}
+.ccontent-header{
+  position: absolute;
+  display: flex;
+  top: 0%;
+  left: 50%;
+  height: 30px;
+  width: 100%;
+  transform: translateX(-50%);
+  align-items: center;
+  text-align: center;
+}
 .content-header{
   position: absolute;
   display: flex;
@@ -243,6 +308,7 @@
   align-items: center;
   text-align: center;
 }
+
 .bur_icon{
   position: absolute;
   object-fit: contain;
@@ -296,6 +362,59 @@
 .aaa{
   font-size: 50px;
 }
+.file-files {
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: auto;
+  gap: 80px;
+}
+.txtfile2{
+  width: clamp(45px, 2.5vw, 50px);
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+  padding-top: 15px;
+}
+.txtfile3{
+  width: clamp(45px, 2.5vw, 50px);
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+  padding-top: 30px;
+}
+.txtfile2:hover{
+  transform: scale(1.1);
+}
+.txtfile2:hover + .aabout_caption {
+  font-size: clamp(14px, calc(0.75rem + 0.2vw), 16px);
+  transition: font-size 0.2s ease-in-out;
+}
+.txtfile3:hover{
+  transform: scale(1.1);
+}
+.txtfile3:hover + .aabout_caption {
+  font-size: clamp(14px, calc(0.75rem + 0.2vw), 16px);
+  transition: font-size 0.2s ease-in-out;
+}
+.project1,
+.project2,
+.project3{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.aabout_caption{
+  font-family: 'txt', sans-serif;
+  font-size: clamp(12px, calc(0.75rem + 0.2vw), 14px);
+  margin-top: 1px;
+  text-align: center;
+  color: #fff;
+  transition: font-size 0.2s ease-in-out;
+}
 .files {
   position: absolute;
   top: 10%;
@@ -318,12 +437,12 @@
   text-align: center;
 }
 .txtfile{
-  width: clamp(45%, calc(5% + 2.5vw), 55%);
+  width: clamp(45px, 2.5vw, 50px);
   height: auto;
   transition: transform 0.3s ease-in-out;
 }
 .file{
-  width: clamp(60%, 5vw + 50%, 70%);
+  width: clamp(55px, 3vw, 60px);
   height: auto;
   transition: transform 0.2s ease-in-out;
 }
@@ -335,7 +454,7 @@
   transition: font-size 0.2s ease-in-out;
 }
 .resume{
-  width: 25%;
+  width: clamp(40px, 2.2vw, 45px);
   height: auto;
   transition: transform 0.2s ease-in-out;
 }
@@ -348,6 +467,114 @@
 }
 .dwn{
   font-size: 12px;
+}
+.instagram,
+.linkedin{
+  width: clamp(45px, 2.5vw, 50px);
+  height: auto;
+  transition: transform 0.2s ease-in-out;
+}
+.github{
+  width: 70px;
+  height: auto;
+  transition: transform 0.2s ease-in-out;
+}
+.exe{
+  padding-top: 30px;
+  width: 50px;
+  height: auto;
+  transition: transform 0.2s ease-in-out;
+}
+.insta,
+.linked,
+.git,
+.messageme{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.instagram:hover,
+.linkedin:hover,
+.github:hover,
+.exe:hover{
+  transform: scale(1.1);
+}
+.instagram:hover + .aabout_caption,
+.linkedin:hover + .aabout_caption,
+.github:hover + .aabout_caption,
+.exe:hover + .aabout_caption{
+  font-size: clamp(14px, calc(0.75rem + 0.2vw), 16px);
+  transition: font-size 0.2s ease-in-out;
+}
+
+.contact {
+  position: absolute;
+  top: 10%;
+  width: 100%;
+  max-width: 500px;
+  padding: 30px;
+}
+
+.contact h1 {
+  text-align: center;
+  font-family: 'txt', sans-serif;
+  font-size: 40px;
+  padding-bottom: 40px;
+  color: white;
+  margin-bottom: 30px;
+  position: static; 
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact .form-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact label {
+  flex: 1;
+  font-family: 'txt', sans-serif;
+  color: white;
+  margin-right: 10px;
+}
+
+.contact input,
+.contact textarea {
+  flex: 2;
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  width: 100%;
+}
+
+.contact textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.contact button {
+  align-self: center;
+  padding: 10px 25px;
+  font-size: 16px;
+  font-family: 'txt', sans-serif;
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact button:hover {
+  background-color: #367bf0;
+  color: white;
+  transform: scale(1.05);
 }
 
 
@@ -407,12 +634,22 @@
     font-size: clamp(120px,10vw,150px);
   }
   .txtfile{
-    width: clamp(40%, 4.88vw + 20.10%, 45%);
+    width: 40px;
   }
+  .txtfile2{
+    width: 40px;
+  }
+  .txtfile3{
+    width: 40px;
+  }
+  
   .txtfile:hover + .about_caption {
     font-size: clamp(13px, 0.26vw + 10.34px, 14px);
   }
   .about_caption{
+    font-size: clamp(11px, 0.26vw + 8.34px, 12px);
+  }
+  .aabout_caption{
     font-size: clamp(11px, 0.26vw + 8.34px, 12px);
   }
   .bur_icon{
@@ -430,6 +667,10 @@
   .content-title{
     transform: translateX(-50%);
     font-size: clamp(16px, 0.52vw + 10.64px, 18px);
+  }
+  .innerbox{
+    width: clamp(600px, 4.5vw + 50px, 700px);
+    height: clamp(25px, 3.92vw - 0.15px, 30px);
   }
 
 
@@ -512,12 +753,27 @@
     font-size: clamp(120px,10vw,150px);
   }
   .txtfile{
-    width: clamp(35%, 2.02vw + 17.47%, 40%);
+    width: clamp(35px, calc(5.47vw + 0px), 45px);
+  }
+  .txtfile2{
+    width: clamp(35px, calc(5.47vw + 0px), 45px);
+  }
+  .txtfile3{
+    width: clamp(35px, calc(5.47vw + 0px), 45px);
+  }
+  .file{
+    width: clamp(50px, calc(0.57vw + 45.6px), 55px);
+  }
+  .resume{
+    width: clamp(35px, calc(1.94vw + 20.1px), 40px);
   }
   .txtfile:hover + .about_caption {
     font-size: clamp(12px, 0.4vw + 8.92px, 13px);
   }
   .about_caption{
+    font-size: clamp(10px, 0.4vw + 6.92px, 11px);
+  }
+  .aabout_caption{
     font-size: clamp(10px, 0.4vw + 6.92px, 11px);
   }
   .content-header{
@@ -538,6 +794,10 @@
   .content-title{
     transform: translateX(-50%);
     font-size: clamp(14px, 0.81vw + 7.52px, 16px);
+  }
+  .innerbox{
+    width: clamp(600px, 4.5vw + 50px, 700px);
+    height: clamp(25px, 3.92vw - 0.15px, 30px);
   }
 }
 
@@ -641,6 +901,31 @@
   z-index: 1;
 }
 
+.mfiles1 {
+  position: absolute;
+  top: 57%;
+  left: 40%;
+  transform: translateX(-50%);
+  display: flex;
+  height: 100px;
+  flex-direction: row;
+  align-items: center;
+  width: 200px;
+  gap: 90px;
+}
+
+.mfiles2{
+  position: absolute;
+  top: 70%;
+  left: 40%;
+  transform: translateX(-50%);
+  display: flex;
+  height: 100px;
+  flex-direction: row;
+  align-items: center;
+  width: 200px;
+  gap: 90px;
+}
 
 
 
@@ -684,10 +969,8 @@
     width: clamp(50px, 7vw, 60px);
   }
   .mAbout{
-    position: absolute;
     text-align: center;
-    top:70%;
-    left:10%;
+    text-wrap: nowrap;
     z-index: 1;
   }
   .mtxtfile{
@@ -714,6 +997,43 @@
     transform: translateX(-50%);
     left:50%;
     font-size: clamp(14px, 0.81vw + 7.52px, 16px);
+  }
+  .mdwn{
+    text-wrap: nowrap;
+  }
+  .innerbox{
+    width:  200px;
+    height: clamp(25px, 3.92vw - 0.15px, 30px);
+  }
+  .txtfile{
+    width: clamp(40px, 2.5vw, 50px);
+  }
+  .txtfile2{
+    width: clamp(40px, 2.5vw, 50px);
+  }
+  .txtfile3{
+    width: clamp(40px, 2.5vw, 50px);
+  }
+  .resume{
+    width: clamp(35px, 2.5vw, 40px);
+  }
+  .file{
+    width: clamp(50px, 3vw, 55px);
+  }
+  .inner-content{
+    font-size: clamp(12px, 0.52vw + 7.64px, 14px);
+  }
+  .back{
+    font-size: clamp(14px, 0.81vw + 7.52px, 16px);
+  }
+  .content-title{
+    font-size: clamp(14px, 0.81vw + 7.52px, 16px);
+  }
+  .mfiles2{
+    gap: clamp(50px, 13vw, 90px);
+  }
+  .mfiles1{
+    gap: clamp(50px, 13vw, 90px);
   }
 
 
@@ -755,13 +1075,7 @@
   .m1, .m2, .m3, .m4, .m5{
     width: clamp(40px, 10vw, 50px);
   }
-  .mAbout{
-    position: absolute;
-    text-align: center;
-    top:70%;
-    left:10%;
-    z-index: 1;
-  }
+  
   .mtxtfile{
     width: clamp(35%, 3.33vw + 24.6%, 40%);
   }
@@ -790,6 +1104,47 @@
     transform: translateX(-50%);
     left:50%;
     font-size: clamp(10px, 2.5vw + 2px, 14px);
+  }
+  .mdwn{
+    text-wrap: nowrap;
+  }
+  .innerbox{
+    width: clamp(100px, calc(100px + (100 * ((100vw - 300px) / 180))), 200px);
+    height: clamp(25px, 3.92vw - 0.15px, 30px);
+  }
+  .txtfile{
+    width: clamp(35px, 2.5vw, 40px);
+  }
+  .txtfile2{
+    width: clamp(35px, 2.5vw, 40px);
+  }
+  .txtfile3{
+    width: clamp(35px, 2.5vw, 40px);
+  }
+  .resume{
+    width: clamp(30px, 2.5vw, 35px);
+  }
+  .file{
+    width: clamp(45px, 3vw, 50px);
+  }
+  .inner-content{
+    font-size: 8px;
+  }
+  .back{
+    font-size: clamp(10px, 2.5vw + 2px, 14px);
+  }
+  .content-title{
+    font-size: clamp(10px, 2.5vw + 2px, 14px);
+  }
+  .mfiles2{
+    gap: clamp(30px, 13vw, 50px);
+  }
+  .mfiles1{
+    gap: clamp(30px, 13vw, 50px);
+  }
+  .file-files{
+    flex-direction: column;
+    gap: 20px;
   }
 
 }

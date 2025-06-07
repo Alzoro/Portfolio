@@ -1,3 +1,6 @@
+import emailjs from '@emailjs/browser';
+
+
 function getFormattedDate() {
     const now = new Date();
     const optionsDate = { weekday: 'short', month: 'short', day: 'numeric' };
@@ -19,4 +22,24 @@ function toggleContent(currentIndex, selectedIndex) {
 }
 
 
-export { getFormattedDate, getFormattedTime, toggleContent };
+
+function sendMail(name, email, message) {
+  const params = {
+    name: name,
+    email: email,
+    message: message,
+  };
+
+  console.log("Sending to EmailJS:", params);
+
+  return emailjs.send(
+    "service_cp38ojf",         
+    "template_m5am52f",       
+    params,
+    "4qZLuWaEjtRhE70RW"          
+  );
+}
+
+
+
+export { getFormattedDate, getFormattedTime, toggleContent, sendMail };
