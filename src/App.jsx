@@ -278,19 +278,22 @@ function Background() {
             <p className='back' onClick={handleBack}>⬅ Back</p>
           </div>
 
-          <div className='file-files'>
+          <div className='ffile-files'>
             <div className='insta'>
-              <img className='instagram' src={instagram} alt='text file'  onClick={()=> handleClick(7)}/>
+              <img className='instagram' src={instagram} alt='text file'  
+              onClick={()=> window.open('https://www.instagram.com/wannabejnz._?igsh=N3gyamZvdWFvb2Vt','_blank')}/>
               <p className='aabout_caption'>Instagram</p>
             </div>
 
             <div className='linked'>
-              <img className='linkedin' src={linkedin} alt='text file'  onClick={()=> handleClick(7)}/>
+              <img className='linkedin' src={linkedin} alt='text file'  
+              onClick={()=> window.open('https://www.linkedin.com/in/jones24','_blank')}/>
               <p className='aabout_caption'>LinkedIn</p>
             </div>
 
             <div className='git'>
-              <img className='github' src={github} alt='text file'  onClick={()=> handleClick(7)}/>
+              <img className='github' src={github} alt='text file'  
+              onClick={()=> window.open('https://github.com/Alzoro','_blank')}/>
               <p className='aabout_caption'>GitHub</p>
             </div>
 
@@ -548,9 +551,88 @@ function Background() {
             <p className='back' onClick={handleBack}>⬅ Back</p>
           </div>
 
-          <div className='files'>
+          <div className='mffile-files'>
+            <div className='insta'>
+              <img className='instagram' src={instagram} alt='text file'  
+              onClick={()=> window.open('https://www.instagram.com/wannabejnz._?igsh=N3gyamZvdWFvb2Vt','_blank')}/>
+              <p className='aabout_caption'>Instagram</p>
+            </div>
+
+            <div className='linked'>
+              <img className='linkedin' src={linkedin} alt='text file'  
+              onClick={()=> window.open('https://www.linkedin.com/in/jones24','_blank')}/>
+              <p className='aabout_caption'>LinkedIn</p>
+            </div>
+
+            <div className='git'>
+              <img className='github' src={github} alt='text file'  
+              onClick={()=> window.open('https://github.com/Alzoro','_blank')}/>
+              <p className='aabout_caption'>GitHub</p>
+            </div>
+
+            <div className='messageme'>
+              <img className='exe' src={exe} alt='text file'  onClick={()=> handleClick(10)}/>
+              <p className='aabout_caption'>Message Me</p>
+            </div>
             
           </div>
+        </div>
+        )}
+
+        {activeContent == 10 && (
+        <div className="filecontent-box">
+          <div className='ccontent-header'>
+            <img className='bur_icon' src={bru_icon} alt="bur_icon" />
+            <p className='back' onClick={() => handleClick(6)}>⬅ Back</p>
+
+          </div>
+          
+          <div className='contact'>
+            <h1>Contact Me</h1>
+
+            <form onSubmit={handleSubmit}>
+              <div className="form-row">
+                <label htmlFor="name">Name:</label>
+                <input 
+                  type="text" 
+                  id="name" 
+                  name="name" 
+                  value={formData.name} 
+                  onChange={handleChange} 
+                  required 
+                />
+              </div>
+
+              <div className="form-row">
+                <label htmlFor="email">Email:</label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange} 
+                  required 
+                />
+              </div>
+
+              <div className="form-row">
+                <label htmlFor="message">Message:</label>
+                <textarea 
+                id="message" 
+                name="message"
+                value={formData.message}
+                onChange={handleChange} 
+                required
+                >
+
+                </textarea>
+              </div>
+
+              <button type="submit">Send</button>
+            </form>
+
+          </div>
+          
         </div>
         )}
         
