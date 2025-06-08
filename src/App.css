@@ -234,6 +234,7 @@
   flex-direction: column;
   justify-content: center;
   z-index: 1;
+  overflow: hidden;
 }
 .filecontent-box{
   position: absolute;
@@ -359,9 +360,7 @@
   font-family: 'txt', sans-serif;
   align-items: center;
 }
-.aaa{
-  font-size: 50px;
-}
+
 .file-files {
   position: absolute;
   top: 15%;
@@ -589,6 +588,280 @@
   transform: scale(1.05);
 }
 
+.skills-con{
+  color:white;
+  font-family: 'txt', sans-serif;
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 16px;
+  overflow-y: auto;
+  height: calc(100% - 30px);
+  width: 100%;
+  text-align: center;
+}
+.skills1,
+.skills2{
+  position: absolute;
+  left:50%;
+  transform: translateX(-50%);
+  column-gap: 80px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); 
+  justify-items: center;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.skills3,
+.skills4{
+  position: absolute;
+  left:50%;
+  transform: translateX(-50%);
+  column-gap: 80px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  justify-items: center;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.skills1{
+  top:160px;
+}
+.skills2 {
+  top:350px;
+}
+.skills3{
+  top:750px;
+}
+.skills4{
+  top:950px;
+}
+.c,
+.python,
+.bash,
+.sql,
+.makefile,
+.latex,
+.nmap,
+.burp,
+.meta,
+.wireshark,
+.bettercap,
+.air,
+.john,
+.hydra,
+.sqlmap,
+.hashcat,
+.splunk,
+.autopsy,
+.canva,
+.figma,
+.git,
+.css,
+.html,
+.js,
+.react,
+.et,
+.net,
+.linux,
+.pen{
+  width: clamp(45px, 2.5vw, 50px);
+  height: auto;
+  transition: transform 0.2s ease-in-out;
+}
+
+.c:hover,
+.python:hover,
+.bash:hover,
+.sql:hover,
+.makefile:hover,
+.latex:hover,
+.nmap:hover,
+.burp:hover,
+.meta:hover,
+.wireshark:hover,
+.bettercap:hover,
+.air:hover,
+.john:hover,
+.hydra:hover,
+.sqlmap:hover,
+.hashcat:hover,
+.splunk:hover,
+.autopsy:hover,
+.canva:hover,
+.figma:hover,
+.git:hover,
+.css:hover,
+.html:hover,
+.js:hover,
+.react:hover,
+.et:hover,
+.net:hover,
+.linux:hover,
+.pen:hover {
+  transform: scale(1.2);
+  filter: brightness(1.2);
+}
+
+.c:hover + .aabout_caption,
+.python:hover + .aabout_caption,
+.bash:hover + .aabout_caption,
+.sql:hover + .aabout_caption,
+.makefile:hover + .aabout_caption,
+.latex:hover + .aabout_caption,
+.nmap:hover + .aabout_caption,
+.burp:hover + .aabout_caption,
+.meta:hover + .aabout_caption,
+.wireshark:hover + .aabout_caption,
+.bettercap:hover + .aabout_caption,
+.air:hover + .aabout_caption,
+.john:hover + .aabout_caption,
+.hydra:hover + .aabout_caption,
+.sqlmap:hover + .aabout_caption,
+.hashcat:hover + .aabout_caption,
+.splunk:hover + .aabout_caption,
+.autopsy:hover + .aabout_caption,
+.canva:hover + .aabout_caption,
+.figma:hover + .aabout_caption,
+.git:hover + .aabout_caption,
+.css:hover + .aabout_caption,
+.html:hover + .aabout_caption,
+.js:hover + .aabout_caption,
+.react:hover + .aabout_caption,
+.et:hover + .aabout_caption,
+.net:hover + .aabout_caption,
+.linux:hover + .aabout_caption,
+.pen:hover + .aabout_caption {
+  font-size: clamp(14px, calc(0.75rem + 0.2vw), 16px);
+  transition: font-size 0.2s ease-in-out;
+}
+.s1,.s2,.s3,.s4,.s5,.s6{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.p1{
+  position: absolute;
+  left:50%;
+  transform: translateX(-50%);
+  top:100px;
+}
+.p2{
+  position: absolute;
+  left:50%;
+  transform: translateX(-50%);
+  top:280px;
+}
+.p3{
+  position: absolute;
+  left:50%;
+  transform: translateX(-50%);
+  top:680px;
+}
+.p4{
+  position: absolute;
+  left:50%;
+  transform: translateX(-50%);
+  top:880px;
+}
+.bottom{
+  position: absolute;
+  left:50%;
+  transform: translateX(-50%);
+  top:1030px;
+}
+/* Firefox */
+.skills-con,
+.exp-con {
+  scrollbar-width: thin;
+  scrollbar-color: #888 transparent;
+}
+
+/* Chrome, Edge, Safari */
+.skills-con::-webkit-scrollbar,
+.exp-con::-webkit-scrollbar {
+  width: 6px;
+}
+
+.skills-con::-webkit-scrollbar-track,
+.exp-con::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.skills-con::-webkit-scrollbar-thumb,
+.exp-con::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.skills-con::-webkit-scrollbar-thumb:hover,
+.exp-con::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.skills-con p:first-of-type{
+  position:relative;
+  text-align: center;
+  left:50%;
+  transform: translateX(-50%);
+  width:80%;
+  font-size: clamp(12px, 0.75vw + 8px, 16px);
+}
+.exp-con{
+  color:white;
+  font-family: 'txt', sans-serif;
+  position: absolute;
+  top: 10%;
+  left: 2%;
+  font-size: 16px;
+  overflow-y: auto;
+  height: calc(100% - 30px);
+  width: 96%;
+  
+}
+.experience-row {
+  display: flex;
+  margin-bottom: 4px;
+}
+.experience-label {
+  width: 150px; 
+  font-weight: bold;
+}
+.list ul{
+  left: 8%;
+  position: absolute;
+}
+.line1,
+.line2{
+  position: absolute;
+  border: none;
+  height:2px;
+  background-color: white;
+  width:100%;
+}
+.line1{
+  top:200px;
+}
+.line2{
+  top:450px;
+}
+.space1{
+  height: 160px;
+}
+.space2{
+  height: 150px;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -689,7 +962,38 @@
 
 }
 
-
+@media screen and (max-width:1190px) {
+  .skills1,
+  .skills2,
+  .skills3,
+  .skills4{
+    column-gap: 80px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+  }
+  .skills2{
+    top:420px;
+  }
+  .skills3{
+    top: 920px;
+  }
+  .skills4{
+    top:1120px;
+  }
+  .p2{
+    top:350px;
+  }
+  .p3{
+    top:850px;
+  }
+  .p4{
+    top:1050px;
+  }
+  .bottom{
+    top:1210px;
+  }
+  
+}
 
 
 
@@ -828,6 +1132,7 @@
 
 
 
+
 .mobile{
   position: relative;
 }
@@ -953,6 +1258,40 @@
   height: auto;
   gap: 70px;
 }
+
+
+
+
+
+
+
+@media screen and (max-width:700px) {
+  .skills1,
+  .skills2,
+  .skills3,
+  .skills4{
+    column-gap: 80px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+  }
+  .skills3{
+    top: 1000px;
+  }
+  .skills4{
+    top:1250px;
+  }
+  .p3{
+    top:930px;
+  }
+  .p4{
+    top:1180px;
+  }
+  .bottom{
+    top:1420px;
+  }
+  
+}
+
 
 
 
@@ -1200,4 +1539,43 @@
     gap: 20px;
   }
 
+}
+
+@media screen and (max-width:430px) {
+  .skills1,
+  .skills2,
+  .skills3,
+  .skills4{
+    column-gap: 80px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+  }
+  .skills1{
+    top:230px;
+  }
+  .skills2{
+    top:580px;
+  }
+  .skills3{
+    top: 1370px;
+  }
+  .skills4{
+    top:1640px;
+  }
+  .p1{
+    top:150px;
+  }
+  .p2{
+    top:500px;
+  }
+  .p3{
+    top:1310px;
+  }
+  .p4{
+    top:1570px;
+  }
+  .bottom{
+    top:1800px;
+  }
+  
 }
