@@ -57,6 +57,7 @@ import et from './images/Skills/et.png';
 import net from './images/Skills/net.png';
 import linux from './images/Skills/linux.png';
 import pen from './images/Skills/pen.png';
+import me from './images/me.png';
 
 
 function Background() {
@@ -171,9 +172,11 @@ function Background() {
           </div>
 
           <div className='Resume'>
-            <img className='resume' src={resume} alt='text file'  onClick={()=> handleClick(5)}/>
+            <a href='/My_Resume.pdf' target="_blank" rel="noopener noreferrer">
+              <img className='resume' src={resume} alt='text file'/>
+            </a>
             <p className='about_caption'>Resume.pdf <br />
-              <span className="dwn">(click to download)</span>
+              <span className="dwn">(click to view)</span>
             </p>
           </div>
 
@@ -185,112 +188,140 @@ function Background() {
         </div>
 
         {activeContent == 1 && (
-        <div className="content-box">
-          <div className='content-header'>
-            <img className='bur_icon' src={bru_icon} alt="bur_icon" />
-            <img className='open' src={open} alt="open" />
-            <p className='back' onClick={handleBack}>⬅ Back</p>
-            <p className='content-title'>About Me.txt</p>
+          <div className="content-box">
+            <div className='content-header'>
+              <img className='bur_icon' src={bru_icon} alt="bur_icon" />
+              <img className='open' src={open} alt="open" />
+              <p className='back' onClick={handleBack}>⬅ Back</p>
+              <p className='content-title'>About Me.txt</p>
 
+            </div>
+            <div>
+              <About />
+            </div>
           </div>
-          <p className='aaa'>This is the dev content asd asd asda asd asd asd asd asd  opened by clicking the image.</p>
-        </div>
         )}
 
         {activeContent == 2 && (
-        <div className="content-box">
-          <div className='content-header'>
-            <img className='bur_icon' src={bru_icon} alt="bur_icon" />
-            <img className='open' src={open} alt="open" />
-            <p className='back' onClick={handleBack}>⬅ Back</p>
-            <p className='content-title'>Skills.txt</p>
+          <div className="content-box">
+            <div className='content-header'>
+              <img className='bur_icon' src={bru_icon} alt="bur_icon" />
+              <img className='open' src={open} alt="open" />
+              <p className='back' onClick={handleBack}>⬅ Back</p>
+              <p className='content-title'>Skills.txt</p>
 
+            </div>
+            <Skill />
           </div>
-          <Skill />
-        </div>
         )}
 
         {activeContent == 3 && (
-        <div className="content-box">
-          <div className='content-header'>
-            <img className='bur_icon' src={bru_icon} alt="bur_icon" />
-            <img className='open' src={open} alt="open" />
-            <p className='back' onClick={handleBack}>⬅ Back</p>
-            <p className='content-title'>Experience.txt</p>
+          <div className="content-box">
+            <div className='content-header'>
+              <img className='bur_icon' src={bru_icon} alt="bur_icon" />
+              <img className='open' src={open} alt="open" />
+              <p className='back' onClick={handleBack}>⬅ Back</p>
+              <p className='content-title'>Experience.txt</p>
 
+            </div>
+              <Experience />
           </div>
-            <Experience />
-        </div>
         )}
 
         {activeContent == 4 && (
-        <div className="filecontent-box">
-          <div className='ccontent-header'>
-            <div className='innerbox'>
-              <p className='inner-content'>🏠︎ Home / Projects</p>
-              <p className='threedot'>⋮</p>
+          <div className="filecontent-box">
+            <div className='ccontent-header'>
+              <div className='innerbox'>
+                <p className='inner-content'>🏠︎ Home / Projects</p>
+                <p className='threedot'>⋮</p>
+              </div>
+              <img className='bur_icon' src={bru_icon} alt="bur_icon" />
+              <p className='back' onClick={handleBack}>⬅ Back</p>
             </div>
-            <img className='bur_icon' src={bru_icon} alt="bur_icon" />
-            <p className='back' onClick={handleBack}>⬅ Back</p>
+            
+            <div className='file-files'>
+              <div className='project1'>
+                <img className='txtfile' src={txtfile} alt='text file'  onClick={()=> handleClick(7)}/>
+                <p className='aabout_caption'>Project-1</p>
+              </div>
+
+              <div className='project2'>
+                <img className='txtfile' src={txtfile} alt='text file'  onClick={()=> handleClick(8)}/>
+                <p className='aabout_caption'>Project-2</p>
+              </div>
+
+              <div className='project3'>
+                <img className='txtfile' src={txtfile} alt='text file'  onClick={()=> handleClick(9)}/>
+                <p className='aabout_caption'>Project-3</p>
+              </div>
+
+              <div className='project4'>
+                <img className='txtfile' src={txtfile} alt='text file'  onClick={()=> handleClick(10)}/>
+                <p className='aabout_caption'>Project-4</p>
+              </div>
+
+            </div>
           </div>
-          
-          <div className='file-files'>
-            <div className='project1'>
-              <img className='txtfile' src={txtfile} alt='text file'  onClick={()=> handleClick(7)}/>
-              <p className='aabout_caption'>Adaptive Speed Limiter </p>
-            </div>
-
-            <div className='project2'>
-              <img className='txtfile2' src={txtfile} alt='text file'  onClick={()=> handleClick(8)}/>
-              <p className='aabout_caption'>Dynamic Honeytoken Monitoring System</p>
-            </div>
-
-            <div className='project3'>
-              <img className='txtfile3' src={txtfile} alt='text file'  onClick={()=> handleClick(9)}/>
-              <p className='aabout_caption'>Portable WiFi Network Testing Device</p>
-            </div>
-
-          </div>
-        </div>
         )}
 
         {activeContent == 7 && (
-        <div className="content-box">
-          <div className='content-header'>
-            <img className='bur_icon' src={bru_icon} alt="bur_icon" />
-            <img className='open' src={open} alt="open" />
-            <p className='back' onClick={() => handleClick(4)}>⬅ Back</p>
-            <p className='content-title'>Adaptive Speed Limiter.txt</p>
+          <div className="content-box">
+            <div className='content-header'>
+              <img className='bur_icon' src={bru_icon} alt="bur_icon" />
+              <img className='open' src={open} alt="open" />
+              <p className='back' onClick={() => handleClick(4)}>⬅ Back</p>
+              <p className='content-title'>Project-1.txt</p>
 
+            </div>
+            <div>
+              <Pro1 />
+            </div>
           </div>
-          <p className='aaa'>This is the dev content asd asd asda asd asd asd asd asd  opened by clicking the image.</p>
-        </div>
         )}
 
         {activeContent == 8 && (
-        <div className="content-box">
-          <div className='content-header'>
-            <img className='bur_icon' src={bru_icon} alt="bur_icon" />
-            <img className='open' src={open} alt="open" />
-            <p className='back' onClick={() => handleClick(4)}>⬅ Back</p>
-            <p className='content-title'>Dynamic Honeytoken Monitoring System.txt</p>
+          <div className="content-box">
+            <div className='content-header'>
+              <img className='bur_icon' src={bru_icon} alt="bur_icon" />
+              <img className='open' src={open} alt="open" />
+              <p className='back' onClick={() => handleClick(4)}>⬅ Back</p>
+              <p className='content-title'>Project-2.txt</p>
 
+            </div>
+            <div>
+              <Pro2 />
+            </div>
           </div>
-          <p className='aaa'>This is the dev content asd asd asda asd asd asd asd asd  opened by clicking the image.</p>
-        </div>
         )}
 
         {activeContent == 9 && (
-        <div className="content-box">
-          <div className='content-header'>
-            <img className='bur_icon' src={bru_icon} alt="bur_icon" />
-            <img className='open' src={open} alt="open" />
-            <p className='back' onClick={() => handleClick(4)}>⬅ Back</p>
-            <p className='content-title'>Portable WiFi Network Testing Device.txt</p>
+          <div className="content-box">
+            <div className='content-header'>
+              <img className='bur_icon' src={bru_icon} alt="bur_icon" />
+              <img className='open' src={open} alt="open" />
+              <p className='back' onClick={() => handleClick(4)}>⬅ Back</p>
+              <p className='content-title'>Project-3.txt</p>
 
+            </div>
+            <div>
+              <Pro3 />
+            </div>
           </div>
-          <p className='aaa'>This is the dev content asd asd asda asd asd asd asd asd  opened by clicking the image.</p>
-        </div>
+        )}
+
+        {activeContent == 10 && (
+          <div className="content-box">
+            <div className='content-header'>
+              <img className='bur_icon' src={bru_icon} alt="bur_icon" />
+              <img className='open' src={open} alt="open" />
+              <p className='back' onClick={() => handleClick(4)}>⬅ Back</p>
+              <p className='content-title'>Project-4.txt</p>
+
+            </div>
+            <div>
+              <Pro4 />
+            </div>
+          </div>
         )}
 
         {activeContent == 6 && (
@@ -324,7 +355,7 @@ function Background() {
             </div>
 
             <div className='messageme'>
-              <img className='exe' src={exe} alt='text file'  onClick={()=> handleClick(10)}/>
+              <img className='exe' src={exe} alt='text file'  onClick={()=> handleClick(11)}/>
               <p className='aabout_caption'>Message Me</p>
             </div>
             
@@ -332,7 +363,7 @@ function Background() {
         </div>
         )}
 
-        {activeContent == 10 && (
+        {activeContent == 11 && (
         <div className="filecontent-box">
           <div className='ccontent-header'>
             <img className='bur_icon' src={bru_icon} alt="bur_icon" />
@@ -446,9 +477,11 @@ function Background() {
           </div>
 
           <div className='Resume'>
-            <img className='resume' src={resume} alt='text file'  onClick={()=> handleClick(5)}/>
+            <a href='/My_Resume.pdf' target="_blank" rel="noopener noreferrer">
+              <img className='resume' src={resume} alt='text file'/>
+            </a>
             <p className='about_caption'>Resume.pdf <br />
-              <span className="mdwn">(click to download)</span>
+              <span className="mdwn">(click to view)</span>
             </p>
           </div>
 
@@ -466,7 +499,9 @@ function Background() {
             <p className='content-title'>About Me.txt</p>
 
           </div>
-          <p className='aaa'>This is the dev content opened by clicking the image.</p>
+          <div>
+              <About />
+            </div>
         </div>
         )}
 
@@ -494,7 +529,9 @@ function Background() {
             <p className='content-title'>Experience.txt</p>
 
           </div>
-          <p className='aaa'>This is the dev content asd asd asda asd asd asd asd asd  opened by clicking the image.</p>
+          <div>
+            <Experience />
+          </div>
         </div>
         )}
 
@@ -511,19 +548,24 @@ function Background() {
           
           <div className='file-files'>
             <div className='project1'>
-            <img className='txtfile' src={txtfile} alt='text file'  onClick={()=> handleClick(7)}/>
-            <p className='aabout_caption'>Adaptive Speed Limiter </p>
-          </div>
+              <img className='txtfile' src={txtfile} alt='text file'  onClick={()=> handleClick(7)}/>
+              <p className='aabout_caption'>Project-1</p>
+            </div>
 
-          <div className='project2'>
-            <img className='txtfile2' src={txtfile} alt='text file'  onClick={()=> handleClick(8)}/>
-            <p className='aabout_caption'>Dynamic Honeytoken Monitoring System</p>
-          </div>
+            <div className='project2'>
+              <img className='txtfile' src={txtfile} alt='text file'  onClick={()=> handleClick(8)}/>
+              <p className='aabout_caption'>Project-2</p>
+            </div>
 
-          <div className='project3'>
-            <img className='txtfile3' src={txtfile} alt='text file'  onClick={()=> handleClick(9)}/>
-            <p className='aabout_caption'>Portable WiFi Network Testing Device</p>
-          </div>
+            <div className='project3'>
+              <img className='txtfile' src={txtfile} alt='text file'  onClick={()=> handleClick(9)}/>
+              <p className='aabout_caption'>Project-3</p>
+            </div>
+
+            <div className='project4'>
+              <img className='txtfile' src={txtfile} alt='text file'  onClick={()=> handleClick(10)}/>
+              <p className='aabout_caption'>Project-4</p>
+            </div>
 
           </div>
         </div>
@@ -533,12 +575,14 @@ function Background() {
         <div className="content-box">
           <div className='content-header'>
             <img className='bur_icon' src={bru_icon} alt="bur_icon" />
-            <img className='open' src={open} alt="open" />
+            
             <p className='back' onClick={() => handleClick(4)}>⬅ Back</p>
-            <p className='content-title'>Adaptive Speed Limiter.txt</p>
+            <p className='content-title'>Project-1.txt</p>
 
           </div>
-          <p className='aaa'>This is the dev content asd asd asda asd asd asd asd asd  opened by clicking the image.</p>
+          <div>
+            <Pro1 />
+          </div>
         </div>
         )}
 
@@ -546,12 +590,14 @@ function Background() {
         <div className="content-box">
           <div className='content-header'>
             <img className='bur_icon' src={bru_icon} alt="bur_icon" />
-            <img className='open' src={open} alt="open" />
+            
             <p className='back' onClick={() => handleClick(4)}>⬅ Back</p>
-            <p className='content-title'>Dynamic Honeytoken Monitoring System.txt</p>
+            <p className='content-title'>Project-2.txt</p>
 
           </div>
-          <p className='aaa'>This is the dev content asd asd asda asd asd asd asd asd  opened by clicking the image.</p>
+          <div>
+            <Pro2 />
+          </div>
         </div>
         )}
 
@@ -559,12 +605,29 @@ function Background() {
         <div className="content-box">
           <div className='content-header'>
             <img className='bur_icon' src={bru_icon} alt="bur_icon" />
-            <img className='open' src={open} alt="open" />
+      
             <p className='back' onClick={() => handleClick(4)}>⬅ Back</p>
-            <p className='content-title'>Portable WiFi Network Testing Device.txt</p>
+            <p className='content-title'>Project-3.txt</p>
 
           </div>
-          <p className='aaa'>This is the dev content asd asd asda asd asd asd asd asd  opened by clicking the image.</p>
+          <div>
+            <Pro3 />
+          </div>
+        </div>
+        )}
+
+        {activeContent == 10 && (
+        <div className="content-box">
+          <div className='content-header'>
+            <img className='bur_icon' src={bru_icon} alt="bur_icon" />
+      
+            <p className='back' onClick={() => handleClick(4)}>⬅ Back</p>
+            <p className='content-title'>Project-4.txt</p>
+
+          </div>
+          <div>
+            <Pro4 />
+          </div>
         </div>
         )}
 
@@ -599,7 +662,7 @@ function Background() {
             </div>
 
             <div className='messageme'>
-              <img className='exe' src={exe} alt='text file'  onClick={()=> handleClick(10)}/>
+              <img className='exe' src={exe} alt='text file'  onClick={()=> handleClick(11)}/>
               <p className='aabout_caption'>Message Me</p>
             </div>
             
@@ -607,7 +670,7 @@ function Background() {
         </div>
         )}
 
-        {activeContent == 10 && (
+        {activeContent == 11 && (
         <div className="filecontent-box">
           <div className='ccontent-header'>
             <img className='bur_icon' src={bru_icon} alt="bur_icon" />
@@ -845,6 +908,7 @@ function Experience() {
   return (
 
   <div class="exp-con">
+    <div className='space0'></div>
     <div class="experience-row">
       <div class="experience-label">Company:</div>
       <div>NTC	Logistics	India	[P]	Limited</div>
@@ -925,10 +989,417 @@ function Experience() {
         </ul>
       </div>
     </div>
+    <div className='space3'></div>
 
   </div>
   );
 }
+
+function Pro1() {
+  return(
+    <div className="pro1-con">
+      <div className="ttitle">Adaptive Speed Limiter</div>
+
+      <div className="pro-con">
+        <div className="pexperience-row">
+          <div className="pexperience-label">Domain:</div>
+          <div>Automotive Safety Systems</div>
+        </div>
+
+        <div className="pexperience-row">
+          <div className="pexperience-label">Technology Used:</div>
+          <div className="plist">
+            <ul>
+              <li>Arduino UNO – for controlling system logic and sensor integration</li>
+              <li>RF Transmitter & Receiver – for wireless communication between zones and the vehicle</li>
+              <li>Motor Driver Module (L298N) – to control motor speed based on limit rules</li>
+              <li>Embedded C – for programming the microcontroller logic</li>
+              <li>Speed Sensors / DC Motor Simulation – for vehicle speed control simulation</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="pexperience-row">
+          <div className="pexperience-label">Knowledge Gained:</div>
+          <div className="plist">
+            <ul>
+              <li>Embedded C programming for real-time systems</li>
+              <li>Interfacing Arduino with RF modules and motor drivers</li>
+              <li>Wireless communication using RF technology</li>
+              <li>Implementing logic to simulate speed control based on external signals</li>
+              <li>Working with control systems and actuators</li>
+              <li>Debugging and testing embedded hardware prototypes</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="pexperience-row">
+          <div className="pexperience-label">Project Description:</div>
+          <div className="plist">
+            <ul>
+              <li>The Adaptive Speed Limiter is a prototype system developed to simulate and enforce 
+                intelligent speed control in vehicles, particularly in critical zones like schools, 
+                hospitals, or accident-prone areas.</li>
+
+              <li>Each restricted zone is equipped with an RF transmitter that broadcasts a predefined 
+                speed limit. When the vehicle enters the zone, the RF receiver picks up the signal, and the
+                 system adjusts the motor speed accordingly via a motor driver module.</li>
+
+              <li>This project focuses on demonstrating how wireless communication can be used to enforce 
+                road safety without relying on human intervention.</li>
+
+            </ul>
+          </div>
+        </div>
+
+        <div className="pexperience-row">
+          <div className="pexperience-label">Key Features:</div>
+          <div className="plist">
+            <ul>
+              <li>RF-Based Zone Detection – detects special zones wirelessly</li>
+              <li>Automatic Speed Control – adjusts speed based on received zone signal</li>
+              <li>Embedded Logic – programmed in Embedded C for real-time processing</li>
+              <li>Emergency Override – allows safe manual control when needed</li>
+              <li>Modular Design – easy to scale or integrate with real vehicles</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div className='pspace'></div>
+
+
+    </div>
+  );
+}
+
+function Pro2(){
+  return (
+
+    <div className='pro2-con'>
+    <div className='ttitle'>Dynamic Honeytoken Monitoring System</div>
+    <div className='pro-con'>
+      
+      <div class="pexperience-row">
+        <div class="pexperience-label">GitHub Link:</div>
+        <div>
+           <a href="https://github.com/Alzoro/HoneyToken-for-file_system.git" target="_blank" rel="noopener noreferrer">
+              Click Here
+            </a>
+        </div>
+      </div>
+      
+      <div class="pexperience-row">
+        <div class="pexperience-label">Domain:</div>
+        <div>File System Security</div>
+      </div>
+
+      <div class="pexperience-row">
+        <div class="pexperience-label">Technology Used:</div>
+        <div className='plist'>
+          <ul>
+            <li>Python – for implementing monitoring, logging, and automation logic</li>
+            <li>Linux (Debian-based) – used for file system monitoring and process backgrounding</li>
+            <li>Telegram Bot API – to deliver real-time alerts to security personnel</li>
+            <li>Watchdog module – for efficient real-time file system event tracking</li>
+            <li>Shell scripting – for managing background execution and startup services</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pexperience-row">
+        <div class="pexperience-label">Knowledge Gained:</div>
+        <div className='plist'>
+          <ul>
+            <li>Implementation of deception-based security using honeytokens</li>
+            <li>Real-time file system monitoring using Linux-native tools and Python libraries</li>
+            <li>Automation of alerting mechanisms using Telegram bots</li>
+            <li>Designing persistent background daemons for continuous monitoring</li>
+            <li>Managing access logs and handling unauthorized access analytics</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pexperience-row">
+        <div class="pexperience-label">Project Description:</div>
+        <div className='plist'>
+          <ul>
+            <li>The Dynamic Honeytoken Monitoring System is a cybersecurity solution designed to detect and 
+              respond to unauthorized access attempts within sensitive file environments. The system deploys 
+              honeytokens (decoy files that appear valuable but serve no real function) strategically 
+              placed in monitored directories. Any interaction with these files (read, write, delete) 
+              indicates a potential insider threat or system compromise.</li>
+
+            <li>Once a honeytoken is triggered, the system logs the activity and immediately sends a 
+              real-time alert via a Telegram bot, allowing system administrators to take swift action. 
+              The system operates as a background process on Linux, ensuring continuous and stealthy 
+              monitoring without impacting performance.</li>
+
+            <li>By combining deception with automated monitoring and alerting, this project demonstrates 
+              a modern approach to insider threat detection and system defense.</li>
+
+          </ul>
+        </div>
+      </div>
+
+      <div class="pexperience-row">
+        <div class="pexperience-label">Key Features:</div>
+        <div className='plist'>
+          <ul>
+            <li>Honeytoken Deployment – strategically placed decoy files to lure unauthorized access</li>
+            <li>Background Monitoring – runs silently as a daemon for real-time detection</li>
+            <li>Instant Telegram Alerts – notifies admins of suspicious activity immediately</li>
+            <li>Detailed Log Management – maintains logs for forensic analysis and audit trails</li>
+            <li>Lightweight & Scalable – minimal system resource usage, adaptable to multiple systems</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div className='pspace'></div>
+
+</div>
+
+  );
+}
+
+
+function Pro3() {
+  return (
+    <div className='pro3-con'>
+    <div className='ttitle'>IoT-Enabled WiFi Network Testing Tool (NT.Watchdog)</div>
+    <div className='pro-con'>
+
+      <div class="pexperience-row">
+        <div class="pexperience-label">GitHub Link:</div>
+        <div>
+           <a href="https://github.com/Alzoro/IoT-Enabled-Portable-Cybersecurity-Device-for-WiFi-Network-Testing.git" target="_blank" rel="noopener noreferrer">
+              Click Here
+            </a>
+        </div>
+      </div>
+      
+      <div class="pexperience-row">
+        <div class="pexperience-label">Domain:</div>
+        <div>Cybersecurity</div>
+      </div>
+
+      <div class="pexperience-row">
+        <div class="pexperience-label">Technology Used:</div>
+        <div className='plist'>
+          <ul>
+
+            <li>ESP32 Dev Module – core microcontroller for Wi-Fi attacks and web hosting</li>
+            <li>SPIFFS (Serial Peripheral Interface Flash File System) – to store and serve static web content</li>
+            <li>Embedded C / Arduino IDE – for firmware development</li>
+            <li>HTML, CSS, JavaScript – for building the mobile-friendly Web UI</li>
+
+          </ul>
+        </div>
+      </div>
+
+      <div class="pexperience-row">
+        <div class="pexperience-label">Knowledge Gained:</div>
+        <div className='plist'>
+          <ul>
+
+            <li>Development of embedded Wi-Fi tools using ESP32</li>
+            <li>Simulating real-world attacks like deauthentication and Evil Twin in a lab-safe environment</li>
+            <li>Web-based interface design for resource-constrained microcontrollers</li>
+            <li>Using SPIFFS to host static websites directly from the ESP32</li>
+            <li>RSSI analysis and scanning of wireless networks</li>
+
+          </ul>
+        </div>
+      </div>
+
+      <div class="pexperience-row">
+        <div class="pexperience-label">Project Description:</div>
+        <div className='plist'>
+          <ul>
+            <li>NT.Watchdog is an IoT-based Wi-Fi network testing tool built using the ESP32 microcontroller
+              , designed for ethical hacking, educational demonstrations, and network defense research.
+               It allows users to simulate wireless attacks such as deauthentication and Evil Twin in a 
+               controlled and responsible environment.</li>
+
+            <li>The system features a built-in web interface, accessible via a smartphone or laptop, that 
+              enables the user to scan nearby networks, analyze signal strength, and deploy testing modules.
+               The Deauthentication Module helps test how resilient networks are to disconnection attacks,
+                particularly under WPA2/WPA3 with PMF. The Evil Twin Module creates a fake access point with 
+                a captive portal to assess the client-side resilience against phishing and HTTPS-related
+                 weaknesses like HSTS and certificate pinning.</li>
+
+            <li>The entire interface and firmware run independently from the ESP32, with web assets stored
+               in SPIFFS, making this a truly portable and self-contained penetration testing toolkit.</li>
+
+          </ul>
+        </div>
+      </div>
+
+      <div class="pexperience-row">
+        <div class="pexperience-label">Key Features:</div>
+        <div className='plist'>
+          <ul>
+            <li>Wi-Fi Network Scanner – lists nearby SSIDs with real-time RSSI levels</li>
+            <li>Signal Strength Analyzer – target-specific RSSI monitoring</li>
+            <li>Deauthentication Module – simulates disconnection attacks to test PMF</li>
+            <li>Evil Twin Access Point – generates fake APs with phishing portals</li>
+            <li>Responsive Web UI – accessible from any device, no internet needed</li>
+            <li>SPIFFS Hosting – serves static content directly from microcontroller flash</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div className='pspace'></div>
+
+</div>
+    
+  );
+}
+
+function Pro4() {
+  return (
+    <div className='pro4-con'>
+    <div className='ttitle'>Cyber Incident Response Simulation Platform (CyberSim)</div>
+    <div className='pro-con'>
+
+      <div class="pexperience-row">
+        <div class="pexperience-label">GitHub Link:</div>
+        <div>
+           <a href="https://github.com/Alzoro/Cyber-Incident-Response-Simulation-Platform.git" target="_blank" rel="noopener noreferrer">
+              Click Here
+            </a>
+        </div>
+      </div>
+      
+      <div class="pexperience-row">
+        <div class="pexperience-label">Domain:</div>
+        <div>Cybersecurity, Simulation & Training</div>
+      </div>
+
+      <div class="pexperience-row">
+        <div class="pexperience-label">Technology Used:</div>
+        <div className='plist'>
+          <ul>
+
+            <li>Languages: JavaScript (ES6+), HTML5, CSS3</li>
+            <li>Framework: Node.js, Express.js</li>
+            <li>Templating Engine: EJS</li>
+            <li>Libraries: Anime.js, Font Awesome</li>
+            <li>Middleware: Helmet, Compression, Morgan</li>
+            <li>APIs: NewsAPI.org</li>
+            <li>Version Control: Git</li>
+
+          </ul>
+        </div>
+      </div>
+
+      <div class="pexperience-row">
+        <div class="pexperience-label">Knowledge Gained:</div>
+        <div className='plist'>
+          <ul>
+
+            <li>Developed in-depth understanding of incident response workflows and SIEM log analysis</li>
+            <li>Strengthened skills in Express.js and front-end animations with Anime.js</li>
+            <li>Gained practical experience in API integration and middleware security practices</li>
+            <li>Explored gamification and user engagement techniques for technical learning platforms</li>
+
+          </ul>
+        </div>
+      </div>
+
+      <div class="pexperience-row">
+        <div class="pexperience-label">Project Description:</div>
+        <div className='plist'>
+          <ul>
+            <li>CyberSim is an advanced web-based incident response simulation platform designed to train 
+              cybersecurity teams and students through interactive, real-world scenarios. It offers a
+               hands-on approach to threat detection, response strategies, and log investigation by 
+               simulating cyber-attacks like phishing, malware infiltration, and data breaches.</li>
+
+            <li>Upon selecting a scenario, users are guided through an Attack Overview and Defensive 
+              Strategy, followed by an animated Simulation Console with real-time progress indicators. 
+              A live Threat Intelligence Feed provides contextual news, while the SIEM Log Analysis tool 
+              enables anomaly detection in synthetic logs. The Incident Response Playbook details stepwise 
+              handling strategies, complemented by a Risk Assessment Module using an interactive matrix. A 
+              Virtual Security Mentor chatbot offers real-time support, while Gamified Metrics and 
+              leaderboards encourage learning. Finally, users generate detailed Incident Reports to conclude
+               their session.</li>
+
+            <li>Ideal for classrooms, training labs, and cybersecurity workshops, CyberSim bridges theory 
+              and practice in an engaging, immersive format.</li>
+
+          </ul>
+        </div>
+      </div>
+
+      <div class="pexperience-row">
+        <div class="pexperience-label">Key Features:</div>
+        <div className='plist'>
+          <ul>
+            <li>Scenario-Based Training: Select from multiple simulated attack cases for guided learning</li>
+            <li>Simulation Console: Step-by-step, animated incident walkthrough with interactive controls</li>
+            <li>Threat Intelligence Feed: Real-time cyber news to correlate with scenario context</li>
+            <li>SIEM Log Analysis: Investigate synthetic logs to trace suspicious activity</li>
+            <li>Incident Response Playbook: Interactive timeline of actions for each scenario</li>
+            <li>Risk Assessment Matrix: Evaluate and visualize risk impact vs. likelihood</li>
+            <li>Virtual Security Mentor: Built-in chatbot for hints, guidance, and feedback</li>
+            <li>Incident Report Generator: Auto-generate detailed reports based on user inputs</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div className='pspace'></div>
+
+</div>
+    
+  );
+}
+
+
+function About(){
+  return (
+    <div className='about-con'>
+
+      <div className='atitle'>
+        I'm JONES P<br />
+        <span className='sub-tit'>Penetration tester. Ethical hacker.</span>
+      </div>
+
+      <div className='meimg'>
+        <img src={me} className='me' alt="me" />
+      </div>
+      
+      <div className='con-about'>
+        <div className='mspace'></div>
+        <p>
+        I am Jones P, a B.Tech Computer Science Engineering student specializing in Cybersecurity at Vel Tech Rangarajan Dr. 
+        Sagunthala R&D Institute of Science and Technology, Chennai. Passionate about ethical hacking and penetration testing, 
+        I actively work with tools like Burp Suite, Nmap, Bettercap, and Metasploit to explore vulnerabilities and enhance system security. 
+        I am proficient in Python, C, HTML, CSS, JavaScript, and React, and I also have hands-on experience in building responsive websites. 
+        Additionally, I have a strong interest in UI/UX design and work with tools like Figma and Canva to visualize and plan digital interfaces. 
+        My key projects include an Adaptive Speed Limiter using Arduino for dynamic vehicle speed control and a Dynamic Honeytoken Monitoring System 
+        that detects unauthorized file access and alerts users in real-time via Telegram. I am constantly exploring new attack vectors, security 
+        mechanisms, and real-world vulnerabilities to sharpen my offensive and defensive cybersecurity skills.
+        </p><br/>
+        <p>
+          Tech enthusiast.
+          Fast Learner.
+          Team Work.
+          Time Management.
+          Details Master.
+          Event Management.
+          Adaptability.
+          Positivity.
+          Active Listening.
+          Problem Solving.
+        </p>
+        <div className='mspace'></div>
+      </div>
+     
+
+    </div>
+  );
+}
+
 
 function App() {
   return (

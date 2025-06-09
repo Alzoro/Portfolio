@@ -364,7 +364,7 @@
 .file-files {
   position: absolute;
   top: 15%;
-  left: 15%;
+  left: 25%;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -401,13 +401,15 @@
 }
 .project1,
 .project2,
-.project3{
+.project3,
+.project4{
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .aabout_caption{
   font-family: 'txt', sans-serif;
+  text-wrap: nowrap;
   font-size: clamp(12px, calc(0.75rem + 0.2vw), 14px);
   margin-top: 1px;
   text-align: center;
@@ -774,32 +776,58 @@
 }
 /* Firefox */
 .skills-con,
-.exp-con {
+.exp-con,
+.pro1-con,
+.pro2-con,
+.pro3-con,
+.pro4-con,
+.about-con{
   scrollbar-width: thin;
   scrollbar-color: #888 transparent;
 }
 
 /* Chrome, Edge, Safari */
 .skills-con::-webkit-scrollbar,
-.exp-con::-webkit-scrollbar {
+.exp-con::-webkit-scrollbar,
+.pro1-con::-webkit-scrollbar,
+.pro2-con::-webkit-scrollbar,
+.pro3-con::-webkit-scrollbar,
+.pro4-con::-webkit-scrollbar,
+.about-con::-webkit-scrollbar{
   width: 6px;
 }
 
 .skills-con::-webkit-scrollbar-track,
-.exp-con::-webkit-scrollbar-track {
+.exp-con::-webkit-scrollbar-track,
+.pro1-con::-webkit-scrollbar-track,
+.pro2-con::-webkit-scrollbar-track,
+.pro3-con::-webkit-scrollbar-track,
+.pro4-con::-webkit-scrollbar-track,
+.about-con::-webkit-scrollbar-track{
   background: transparent;
 }
 
 .skills-con::-webkit-scrollbar-thumb,
-.exp-con::-webkit-scrollbar-thumb {
+.exp-con::-webkit-scrollbar-thumb,
+.pro1-con::-webkit-scrollbar-thumb,
+.pro2-con::-webkit-scrollbar-thumb,
+.pro3-con::-webkit-scrollbar-thumb,
+.pro4-con::-webkit-scrollbar-thumb,
+.about-con::-webkit-scrollbar-thumb{
   background: #888;
   border-radius: 4px;
 }
 
 .skills-con::-webkit-scrollbar-thumb:hover,
-.exp-con::-webkit-scrollbar-thumb:hover {
+.exp-con::-webkit-scrollbar-thumb:hover,
+.pro1-con::-webkit-scrollbar-thumb:hover,
+.pro2-con::-webkit-scrollbar-thumb:hover,
+.pro3-con::-webkit-scrollbar-thumb:hover,
+.pro4-con::-webkit-scrollbar-thumb:hover,
+.about-con::-webkit-scrollbar-thumb:hover{
   background: #555;
 }
+
 .skills-con p:first-of-type{
   position:relative;
   text-align: center;
@@ -808,18 +836,21 @@
   width:80%;
   font-size: clamp(12px, 0.75vw + 8px, 16px);
 }
-.exp-con{
+.exp-con,
+.pro1-con,
+.pro2-con,
+.pro3-con{
   color:white;
   font-family: 'txt', sans-serif;
   position: absolute;
-  top: 10%;
+  top: 5%;
   left: 2%;
-  font-size: 16px;
+  font-size: clamp(12px, 0.75vw + 8px, 16px);
   overflow-y: auto;
   height: calc(100% - 30px);
   width: 96%;
-  
 }
+
 .experience-row {
   display: flex;
   margin-bottom: 4px;
@@ -841,10 +872,13 @@
   width:100%;
 }
 .line1{
-  top:200px;
+  top:250px;
 }
 .line2{
-  top:450px;
+  top:500px;
+}
+.space0{
+  height:40px;
 }
 .space1{
   height: 160px;
@@ -852,6 +886,97 @@
 .space2{
   height: 150px;
 }
+.space3{
+  top: 100%;
+  height: 160px;
+}
+
+
+.ttitle {
+  color: rgb(19, 139, 19);
+  text-align: center;
+  font-size: 24px;
+  margin-top:40px;
+  margin-bottom: 40px;
+}
+
+.pro-con {
+  display: flex;
+  flex-direction: column;
+  gap: 30px; 
+}
+
+.pexperience-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.pexperience-label {
+  width: 200px;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.plist ul {
+  padding-left: 20px;
+  margin: 0;
+  list-style-type: disc;
+}
+.pspace{
+  top: 100%;
+  height: 45px;
+}
+
+.about-con{
+  color:white;
+  font-family: 'txt', sans-serif;
+  position: absolute;
+  top: 5%;
+  left: 2%;
+  font-size: clamp(14px, calc(0.33vw + 9.3px), 16px);
+  overflow-y: auto;
+  height: calc(100% - 30px);
+  width: 96%;
+}
+
+.atitle {
+  text-align: center;
+  font-size: 32px;
+  margin-top:30px;
+  margin-bottom: 40px;
+}
+.sub-tit{
+  text-align: center;
+  font-size: 14px;
+}
+  
+.meimg{
+  position: absolute;
+  left:65%;
+}
+  
+.me{
+  border-radius: 15px;  
+  width: clamp(250px, calc(8.33vw + 133.38px), 300px);      
+  height: auto;
+}
+
+.con-about{
+  position: absolute;
+  left:10%;
+  text-align: justify;
+  font-family: 'txt', sans-serif;
+  width:50%;
+}
+
+
+
+
+
+
+  
+
 
 
 
@@ -957,6 +1082,20 @@
     width: clamp(600px, 4.5vw + 50px, 700px);
     height: clamp(25px, 3.92vw - 0.15px, 30px);
   }
+  .about-con{
+    color:white;
+    font-family: 'txt', sans-serif;
+    position: absolute;
+    top: 5%;
+    left: 2%;
+    font-size: clamp(12px, calc(0.53vw + 6.55px), 14px);
+    overflow-y: auto;
+    height: calc(100% - 30px);
+    width: 96%;
+  }
+
+
+
 
 
 
@@ -1118,6 +1257,25 @@
   .ffile-files {
     left: 25%;
   }
+  .about-con{
+    font-size: clamp(11px, calc(0.39vw + 8px), 12px);
+  }
+  .atitle {
+    font-size: clamp(28px, calc(1.5625vw + 16px), 32px);
+  }
+  .sub-tit{
+    font-size:  clamp(11px, calc(0.012vw + 2px), 14px);
+  } 
+  .me{
+    border-radius: 15px;  
+    width: clamp(200px, calc(0.195vw + 198.5px), 250px);
+    height: auto;
+  }
+  .con-about{
+    left:clamp(5%, calc(0.02vw + 4.5%), 10%);
+    width:clamp(50%, calc(-1.95vw + 65%), 55%);
+  }
+
 }
 
 
@@ -1342,9 +1500,6 @@
   .mtxtfile{
     width: 40%;
   }
-  /* .content-box{
-    overflow-y: auto;
-  } */
   .content-header{
     height: clamp(20px, 3.92vw - 0.15px, 30px);
   }
@@ -1377,6 +1532,14 @@
   .txtfile2{
     width: clamp(40px, 2.5vw, 50px);
   }
+  .file-files{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    column-gap: 80px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
   .txtfile3{
     width: clamp(40px, 2.5vw, 50px);
   }
@@ -1401,6 +1564,29 @@
   .mfiles1{
     gap: clamp(50px, 13vw, 90px);
   }
+  .ttitle{
+    font-size:clamp(14px, calc(2.17vw + 7.5px), 24px);
+
+  }
+
+  .about-con{
+    font-size: 12px;
+  }  
+  .meimg{
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+  }
+  .con-about{
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+    top: 75%;
+    width: clamp(70%, calc(-3.33vw + 95.6%), 80%);
+  }
+  .mspace{
+    height:20px;
+  }
 
 
 }
@@ -1414,6 +1600,9 @@
     flex-wrap: wrap;
     gap: 70px;
   }
+  .pexperience-label {
+    width: 100px;
+}
 }
 
 @media screen and (max-width:650px){
@@ -1475,9 +1664,7 @@
     font-size: clamp(8px, 1.25vw + 3px, 10px);
   }
   
-  /* .content-box{
-    overflow-y: auto;
-  } */
+
   .content-header{
     height: clamp(20px, 3.92vw - 0.15px, 30px);
   }
@@ -1534,12 +1721,89 @@
   .mfiles1{
     gap: clamp(30px, 13vw, 50px);
   }
-  .file-files{
+  /* .file-files{
     flex-direction: column;
     gap: 20px;
+  } */
+  .line1{
+    top:290px;
+  }
+  .line2{
+    top:560px;
   }
 
+  .space1{
+    height: 200px;
+  }
+  .space2{
+    height: 200px;
+  }
+  .space3{
+    top: 100%;
+    height: 210px;
+  }
+  .about-con{
+    font-size: clamp(9px, calc(1.67vw + 4px), 12px);
+  }
+
+  .atitle {
+    font-size: clamp(20px, calc(3.33vw + 10px), 26px);;
+  }
+  .sub-tit{
+    font-size:  clamp(8px, calc(1.11vw + 4.67px), 10px);
+  }
+    
+  .meimg{
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+  }
+    
+  .me{ 
+    width: 200px;
+  }
+
+  .con-about{
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+    width: clamp(70%, calc(-3.33vw + 95.6%), 80%);
+  }
+  .mspace{
+    height:20px;
+  }
+  
+
 }
+
+
+
+
+@media screen and (max-width: 460px) {
+  .line1{
+    top:340px;
+  }
+  .line2{
+    top:670px;
+  }
+
+  .space1{
+    height: 250px;
+  }
+  .space2{
+    height: 240px;
+  }
+  .space3{
+    top: 100%;
+    height: 240px;
+  }
+
+  
+}
+
+
+
+
 
 @media screen and (max-width:430px) {
   .skills1,
@@ -1576,6 +1840,64 @@
   }
   .bottom{
     top:1800px;
+  }
+  
+}
+
+@media screen and (max-width: 400px) {
+  .pro1-con,
+  .pro2-con{
+    
+    font-size: 10px;
+    
+  }
+  .pexperience-label {
+    width: 60px;
+  }
+  .me{
+    width:clamp(150px, calc(3.33vw + 137.5px), 200px);
+  }
+  .mspace{
+    height:20px;
+  }
+
+}
+@media screen and (width: 390px) {
+  .me{
+    width:200px;
+  }
+  .mspace{
+    height:20px;
+  }
+
+}
+
+
+@media screen and (max-width: 380px) {
+  .line1{
+    top:430px;
+  }
+  .line2{
+    top:820px;
+  }
+
+  .space1{
+    height: 320px;
+  }
+  .space2{
+    height: 270px;
+  }
+  .space3{
+    top: 100%;
+    height: 370px;
+  }
+
+  
+}
+
+@media screen and (max-width:360px){
+  .pexperience-label {
+    width: 80px;
   }
   
 }
