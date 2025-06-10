@@ -187,7 +187,7 @@ function Background() {
 
         </div>
 
-        {activeContent == 1 && (
+        {activeContent === 1 && (
           <div className="content-box">
             <div className='content-header'>
               <img className='bur_icon' src={bru_icon} alt="bur_icon" />
@@ -202,7 +202,7 @@ function Background() {
           </div>
         )}
 
-        {activeContent == 2 && (
+        {activeContent === 2 && (
           <div className="content-box">
             <div className='content-header'>
               <img className='bur_icon' src={bru_icon} alt="bur_icon" />
@@ -215,7 +215,7 @@ function Background() {
           </div>
         )}
 
-        {activeContent == 3 && (
+        {activeContent === 3 && (
           <div className="content-box">
             <div className='content-header'>
               <img className='bur_icon' src={bru_icon} alt="bur_icon" />
@@ -228,7 +228,7 @@ function Background() {
           </div>
         )}
 
-        {activeContent == 4 && (
+        {activeContent === 4 && (
           <div className="filecontent-box">
             <div className='ccontent-header'>
               <div className='innerbox'>
@@ -264,7 +264,7 @@ function Background() {
           </div>
         )}
 
-        {activeContent == 7 && (
+        {activeContent === 7 && (
           <div className="content-box">
             <div className='content-header'>
               <img className='bur_icon' src={bru_icon} alt="bur_icon" />
@@ -279,7 +279,7 @@ function Background() {
           </div>
         )}
 
-        {activeContent == 8 && (
+        {activeContent === 8 && (
           <div className="content-box">
             <div className='content-header'>
               <img className='bur_icon' src={bru_icon} alt="bur_icon" />
@@ -294,7 +294,7 @@ function Background() {
           </div>
         )}
 
-        {activeContent == 9 && (
+        {activeContent === 9 && (
           <div className="content-box">
             <div className='content-header'>
               <img className='bur_icon' src={bru_icon} alt="bur_icon" />
@@ -309,7 +309,7 @@ function Background() {
           </div>
         )}
 
-        {activeContent == 10 && (
+        {activeContent === 10 && (
           <div className="content-box">
             <div className='content-header'>
               <img className='bur_icon' src={bru_icon} alt="bur_icon" />
@@ -324,7 +324,7 @@ function Background() {
           </div>
         )}
 
-        {activeContent == 6 && (
+        {activeContent === 6 && (
         <div className="filecontent-box">
           <div className='ccontent-header'>
             <div className='innerbox'>
@@ -363,7 +363,7 @@ function Background() {
         </div>
         )}
 
-        {activeContent == 11 && (
+        {activeContent === 11 && (
         <div className="filecontent-box">
           <div className='ccontent-header'>
             <img className='bur_icon' src={bru_icon} alt="bur_icon" />
@@ -491,7 +491,7 @@ function Background() {
           </div>
         </div>
 
-        {activeContent == 1 && (
+        {activeContent === 1 && (
         <div className="content-box">
           <div className='content-header'>
             <img className='bur_icon' src={bru_icon} alt="bur_icon" />
@@ -505,7 +505,7 @@ function Background() {
         </div>
         )}
 
-        {activeContent == 2 && (
+        {activeContent === 2 && (
         <div className="content-box">
           <div className='content-header'>
             <img className='bur_icon' src={bru_icon} alt="bur_icon" />
@@ -520,7 +520,7 @@ function Background() {
         </div>
         )}
 
-        {activeContent == 3 && (
+        {activeContent === 3 && (
         <div className="content-box">
           <div className='content-header'>
             <img className='bur_icon' src={bru_icon} alt="bur_icon" />
@@ -535,7 +535,7 @@ function Background() {
         </div>
         )}
 
-        {activeContent == 4 && (
+        {activeContent === 4 && (
         <div className="filecontent-box">
           <div className='ccontent-header'>
             <div className='innerbox'>
@@ -571,7 +571,7 @@ function Background() {
         </div>
         )}
 
-        {activeContent == 7 && (
+        {activeContent === 7 && (
         <div className="content-box">
           <div className='content-header'>
             <img className='bur_icon' src={bru_icon} alt="bur_icon" />
@@ -586,7 +586,7 @@ function Background() {
         </div>
         )}
 
-        {activeContent == 8 && (
+        {activeContent === 8 && (
         <div className="content-box">
           <div className='content-header'>
             <img className='bur_icon' src={bru_icon} alt="bur_icon" />
@@ -601,7 +601,7 @@ function Background() {
         </div>
         )}
 
-        {activeContent == 9 && (
+        {activeContent === 9 && (
         <div className="content-box">
           <div className='content-header'>
             <img className='bur_icon' src={bru_icon} alt="bur_icon" />
@@ -616,7 +616,7 @@ function Background() {
         </div>
         )}
 
-        {activeContent == 10 && (
+        {activeContent === 10 && (
         <div className="content-box">
           <div className='content-header'>
             <img className='bur_icon' src={bru_icon} alt="bur_icon" />
@@ -631,7 +631,7 @@ function Background() {
         </div>
         )}
 
-        {activeContent == 6 && (
+        {activeContent === 6 && (
         <div className="filecontent-box">
           <div className='ccontent-header'>
             <div className='innerbox'>
@@ -670,7 +670,7 @@ function Background() {
         </div>
         )}
 
-        {activeContent == 11 && (
+        {activeContent === 11 && (
         <div className="filecontent-box">
           <div className='ccontent-header'>
             <img className='bur_icon' src={bru_icon} alt="bur_icon" />
