@@ -839,7 +839,8 @@
 .exp-con,
 .pro1-con,
 .pro2-con,
-.pro3-con{
+.pro3-con,
+.pro4-con{
   color:white;
   font-family: 'txt', sans-serif;
   position: absolute;
